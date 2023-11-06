@@ -1,14 +1,9 @@
-export interface SkillsMember {
-    name: string;
-    age: number;
-    skills: string[];
-}
-
-export function createMember(name: string, age: number, skills: string[]): SkillsMember {
+function skillsMember() {
     return {
-        name,
-        age,
-        skills,
+        restrict: 'E',
+        templateUrl: 'templates/skills-member.html',
+        scope: {
+        member: '='
+        }
     };
 }
-
